@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="./Images/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee and Tea</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="book.js"></script>
+
+    <style>
+        .row span {
+            color: red;
+        }
+
+        .contact_section {
+            background: url('./Images/women_flip.jpg') no-repeat center center/cover;
+            padding: 50px 0;
+        }
+
+        .heading_container h2 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 30px;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        input {
+            outline: none;
+            color: #fefefe;
+            background-color: transparent;
+            text-transform: uppercase;
+
+            &::placeholder {
+                color: #fafafa;
+                text-transform: uppercase;
+            }
+
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        input[type="time"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus,
+        input[type="time"]:focus {
+            border-color: #007bff;
+            box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.5);
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background-color: rgb(218, 142, 0);
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: rgb(200, 130, 0);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">TON N TOWN <i class="fa-solid fa-mug-hot"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">SERVICES</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="book.html">BOOK TABLE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">FEEDBACK</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- section section -->
+
+    <section class="contact_section">
+        <div class="container pb-5 pt-5">
+            <div class="heading_container heading_center">
+                <h2 class="text-center">Book A Table</h2>
+            </div>
+            <div class="">
+                <div class="row">
+                    <div class="col-md-7 mx-auto">
+                        <form id="bookingForm" onsubmit="return validateForm()">
+                            <div class="">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="text" placeholder="Full Name" class="mt-3" id="fname" required />
+                                        <br>
+                                        <span id="umsg"></span>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="email" placeholder="Email" class="mt-3" id="email" required />
+                                        <br>
+                                        <span id="emsg"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="number" placeholder="Phone Number" class="mt-4" id="mobile" required />
+                                        <br>
+                                        <span id="mmsg"></span>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="number" placeholder="Number of People" class="mt-4" id="people"
+                                            required />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="date" placeholder="Select date" class="mt-4" id="date" required />
+                                        <!-- <i class="fa-solid fa-calendar-days"></i> -->
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="time" placeholder="Select Time" class="mt-4" id="time" required />
+                                        <!-- <i class="fa-regular fa-alarm-clock"></i> -->
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <input type="text" placeholder="Additional Note" class="mt-4" />
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-block mb-5 mt-4">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- First Column -->
+                <div class="col-md-4">
+                    <h5 class="pt-3 pb-3 text-warning">Follow Us On</h5>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                </div>
+                <!-- Second Column -->
+                <div class="col-md-4">
+                    <h5 class="pt-3 pb-3 text-warning">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: info@example.com</li>
+                        <li>Phone: +1 234 567 890</li>
+                        <li>Address: 1234 Street Name, City, Country</li>
+                    </ul>
+                </div>
+                <!-- Third Column with Map -->
+                <div class="col-md-4">
+                    <h5 class="pt-3 pb-3 text-warning">Our Location</h5>
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241413.2733502984!2d72.72130319086293!3d19.016090549346654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9f0b81f13ad%3A0x3c12f7681185f869!2sNavi%20Mumbai%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sus!4v1719913897171!5m2!1sen!2sus"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

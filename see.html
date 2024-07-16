@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="./Images/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee and Tea</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .detail-box {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .detail-box:hover {
+            transform: scale(1.05);
+        }
+
+        .detail-box img {
+            width: 4vh;
+            height: 4vh;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .detail-box:hover img {
+            transform: scale(1.1);
+        }
+
+        .detail-box h5 {
+            font-size: 1.5rem;
+            margin-top: 15px;
+            transition: color 0.3s;
+        }
+
+        .detail-box:hover h5 {
+            color: #ff6347;
+        }
+
+        .detail-box p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 80vh;
+            border-radius: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .menu-section {
+            margin-top: 5rem;
+        }
+
+        .menu-item {
+            margin-bottom: 3rem;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 30vh;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .menu-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .menu-item h5 {
+            font-size: 1.5rem;
+            margin-top: 15px;
+            transition: color 0.3s;
+        }
+
+        .menu-item:hover h5 {
+            color: #ff6347;
+        }
+
+        .menu-item p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .social-icons i {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            transition: color 0.3s;
+        }
+
+        .social-icons i:hover {
+            color: #ff6347;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">TON N TOWN <i class="fa-solid fa-mug-hot"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">SERVICES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="book.html">BOOK TABLE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">FEEDBACK</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services section -->
+    <section class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="detail-box mb-4">
+                    <img src="images/s1.png" alt="">
+                    <h5>Original Coffee</h5>
+                    <p>The original domesticated coffee plant is said to have been from Harar, and the native population is thought to be derived from Ethiopia with distinct nearby populations in Sudan and Kenya.
+                    </p>
+                </div>
+                <div class="detail-box mb-4">
+                    <img src="images/s2.png" alt="">
+                    <h5>Self Roasted</h5>
+                    <p>One of the simplest ways to start is to place a layer of beans on a baking tray and roast them in the oven. This will take around 15-20 minutes. Stove top popcorn poppers can also be a good option for home roasting because they roast a larger batch and provide more control of temperature.
+                    </p>
+                </div>
+                <div class="detail-box mb-4">
+                    <img src="images/s3.png" alt="">
+                    <h5>15 Coffee Items</h5>
+                    <p>1. Espresso 2. Latte/Iced Latte 3. Black Coffee 4. Mocha 5. Americano <br> 6. Cappuccino 7. Flat White 8. Cafe au Lait 9. Macchiato 10. Cold Brew <br> 11. Irish Coffee 12. Frappe 13. Vietnamese Coffee 14. Affogato 15. Red Eye 
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-5 ml-auto">
+                <div class="img-box">
+                    <img src="images/spcl-img.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu section -->
+    <section class="menu-section container">
+        <div class="row">
+            <div class="col-md-4 menu-item">
+                <img src="images/Espresso.png" alt="Menu Item 1">
+                <h5>Espresso</h5>
+                <p>A strong and bold coffee made by forcing hot water through finely-ground coffee beans.</p>
+            </div>
+            <div class="col-md-4 menu-item">
+                <img src="images/Latte.jpg" alt="Menu Item 2">
+                <h5>Latte</h5>
+                <p>A creamy coffee drink made with espresso and steamed milk.</p>
+            </div>
+            <div class="col-md-4 menu-item">
+                <img src="images/Mocha.png" alt="Menu Item 3">
+                <h5>Mocha</h5>
+                <p>A chocolate-flavored variant of a latte made with espresso, steamed milk, and chocolate syrup.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 menu-item">
+                <img src="images/Cappuccino.png" alt="Menu Item 4">
+                <h5>Cappuccino</h5>
+                <p>A balanced coffee drink made with equal parts of espresso, steamed milk, and milk foam.</p>
+            </div>
+            <div class="col-md-4 menu-item">
+                <img src="images/Americano.jpg" alt="Menu Item 5">
+                <h5>Americano</h5>
+                <p>A simple coffee drink made by diluting an espresso with hot water.</p>
+            </div>
+            <div class="col-md-4 menu-item">
+                <img src="images/Cold Brew.jpg" alt="Menu Item 6">
+                <h5>Cold Brew</h5>
+                <p>A smooth and refreshing coffee drink made by steeping coarsely-ground coffee beans in cold water for an extended period.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- First Column -->
+                <div class="col-md-4">
+                    <h5 class="pt-3 pb-3 text-warning">Follow Us On</h5>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                </div>
+                <!-- Second Column -->
+                <div class="col-md-4">
+                    <h5 class="pt-3 pb-3 text-warning">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: info@example.com</li>
+                        <li>Phone: +1 234 567 890</li>
+                        <li>Address: 1234 Street Name, City, Country</li>
+                    </ul>
+                </div>
+                <!-- Third Column with Map -->
+                <div class="col-md-4">
+                    <h5 class="pt-3 pb-3 text-warning">Our Location</h5>
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241413.2733502984!2d72.72130319086293!3d19.016090549346654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9f0b81f13ad%3A0x3c12f7681185f869!2sNavi%20Mumbai%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sus!4v1719913897171!5m2!1sen!2sus"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

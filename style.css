@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.navbar-brand {
+    font-family: 'Lobster', cursive;
+    font-size: 1.5rem;
+    color: #ff8c00 !important;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+}
+
+.nav-link {
+    width: 150px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ff8c00;
+    background-color: #343a40;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+.navbar-toggler-icon {
+    border: 2px solid #fff;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-collapse .navbar-nav {
+    align-items: center;
+}
+
+.navbar-collapse .navbar-nav .nav-item {
+    margin: 0 10px;
+}
+
+.navbar-toggler:focus, .navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+}
+
+footer {
+    background: #343a40;
+    color: white;
+    padding: 2rem 0;
+}
+
+.social-icons i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: white;
+    transition: color 0.3s;
+}
+
+.social-icons i:hover {
+    color: #ff8c00;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 200px;
+    width: 100%;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 200px;
+    width: 100%;
+}

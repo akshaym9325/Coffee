@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="./Images/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee and Tea</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .btn-custom {
+            background-color: #ff8c00;
+            color: white;
+            border: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #e07b00;
+            transform: scale(1.05);
+        }
+
+        .about-section, .beans-section {
+            padding: 50px 0;
+            background-color: #f8f9fa;
+        }
+
+        .about-section h2, .beans-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .about-section h2::after, .beans-section h2::after {
+            content: '';
+            width: 50px;
+            height: 5px;
+            background-color: #ff8c00;
+            display: block;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+        }
+
+        .about-section p, .beans-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .about-section img, .beans-section img {
+            width: 100%;
+            height: 60vh;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .about-section img:hover, .beans-section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .fadeIn {
+            opacity: 0;
+            animation: fadeInSection 1s forwards;
+        }
+
+        @keyframes fadeInSection {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+
+    
+</head>
+
+<body>
+    <!-- navbar section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">TON N TOWN <i class="fa-solid fa-mug-hot"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">SERVICES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="book.html">BOOK TABLE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">FEEDBACK</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Us section -->
+    <section class="about-section fadeIn">
+        <div class="container">
+            <div class="row pb-5 pt-5">
+                <!-- first col -->
+                <div class="col-md-6">
+                    <h2>About Us</h2>
+                    <p>Welcome to TON N TOWN! Located in the heart of Navi Mumbai, we are your cozy spot for delicious
+                        coffee, tasty pastries, and a friendly atmosphere. Our baristas brew each cup with care, using
+                        only the finest beans. Whether you’re here to relax, catch up with friends, or get some work
+                        done, we’ve got the perfect place for you. Thank you for choosing TON N TOWN — we look forward
+                        to serving you!
+                    </p>
+                    <a href="#" class="btn btn-custom mb-5">Read More</a>
+                </div>
+                <!-- second col -->
+                <div class="col-md-6">
+                    <img src="./Images/coffee-819362_1280.jpg" alt="Coffee Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Coffee Beans section -->
+    <section class="beans-section fadeIn">
+        <div class="container">
+            <div class="row pb-5">
+                <!-- first col -->
+                <div class="col-md-6">
+                    <img src="./Images/coffee-beans-2258839_640.jpg" alt="Coffee Beans Image" class="mb-5">
+                </div>
+                <!-- second col -->
+                <div class="col-md-6">
+                    <h2>About Coffee Beans</h2>
+                    <p>A coffee bean is a seed from the Coffea plant and the source for coffee. It is the pit inside the red
+                        or purple fruit. This fruit is often referred to as a coffee cherry, and like the cherry, it is a
+                        fruit with a pit. Even though the coffee beans are not technically beans, they are referred to as
+                        such because of their resemblance to true beans. The fruits most commonly contain two stones with
+                        their flat sides together. A small percentage of cherries contain a single seed, called a
+                        "peaberry". Peaberries make up only around 10% to 15% of all coffee beans. It is a fairly common
+                        belief that they have more flavour than normal coffee beans.[3] Like Brazil nuts (a seed) and white
+                        rice, coffee beans consist mostly of endosperm.[4]
+                    </p>
+                    <a href="#" class="btn btn-custom">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- First Column -->
+                <div class="col-md-4">
+                    <h5 class="pt-3 pb-3 text-warning">Follow Us On</h5>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                </div>
+                <!-- Second Column -->
+                <div class="col-md-4">
+                    <h5 class="pt-3 pb-3 text-warning">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: info@example.com</li>
+                        <li>Phone: +1 234 567 890</li>
+                        <li>Address: 1234 Street Name, City, Country</li>
+                    </ul>
+                </div>
+                <!-- Third Column with Map -->
+                <div class="col-md-4">
+                    <h5 class="pt-3 pb-3 text-warning">Our Location</h5>
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241413.2733502984!2d72.72130319086293!3d19.016090549346654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9f0b81f13ad%3A0x3c12f7681185f869!2sNavi%20Mumbai%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sus!4v1719913897171!5m2!1sen!2sus"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

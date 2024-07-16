@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="./Images/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee and Tea</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <style>
+            /* Carousel Controls */
+            .carousel-control-prev,
+            .carousel-control-next {
+                /* background-color: aqua; */
+                width: 45px;
+                height: 45px;
+                border: none;
+                opacity: 1;
+                background-color: gray;
+                color: white;
+                border-radius: 100%;
+                top: 45%;
+            }
+    
+            .carousel-control-prev:hover,
+            .carousel-control-next:hover {
+                color: black;
+            }
+    
+            /* Carousel Item Animation */
+            .carousel-item {
+                transition: transform 1s ease-in-out;
+            }
+    
+            .carousel-item img {
+                width: 100px;
+                height: 100px;
+                margin: 20px auto;
+                display: block;
+                animation: fadeIn 2s;
+            }
+    
+            .carousel-item h4 {
+                animation: slideIn 1s ease-out;
+            }
+    
+            .carousel-item p {
+                animation: slideIn 1.5s ease-out;
+            }
+    
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+    
+                to {
+                    opacity: 1;
+                }
+            }
+    
+            @keyframes slideIn {
+                from {
+                    transform: translateX(-100%);
+                    opacity: 0;
+                }
+    
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+    
+            .carousel-item {
+                height: 60vh;
+                padding: 20px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                background-color: #f8f9fa;
+            }
+    
+            .carousel-item:hover {
+                background-color: #e2e6ea;
+                transition: background-color 0.5s;
+            }
+    
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 50px;
+                height: 50px;
+                background-color: #333;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0.8;
+                transition: all 0.3s ease;
+            }
+    
+            .carousel-control-prev:hover,
+            .carousel-control-next:hover {
+                background-color: #555;
+                opacity: 1;
+            }
+    
+            .carousel-control-prev i,
+            .carousel-control-next i {
+                font-size: 24px;
+            }
+    
+            .box {
+                max-width: 700px;
+                margin: 0 auto;
+            }
+            
+        </style>
+
+
+</head>
+
+<body>
+    <!-- navbar section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top mb-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">TON N TOWN <i class="fa-solid fa-mug-hot"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">SERVICES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="book.html">BOOK TABLE</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="feedback.html">FEEDBACK</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- section section -->
+
+    <div class="container mt-5 mb-5">
+        <div class="text-center">
+            <h2 class="mb-5">What says our client</h2>
+        </div>
+        <div class="carousel slide text-center" id="carouselExampleControls" data-ride:="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="box">
+                        <img src="images/client 3.jpg" alt="" class="rounded-circle">
+                        <h4>Amol</h4>
+                        <p>"Absolutely love this place! The coffee is always perfect, and the atmosphere is so cozy and
+                            inviting. It's my favorite spot to relax and catch up with friends. The staff is always
+                            friendly and welcoming, making me feel right at home every time I visit. Whether it's their
+                            rich, aromatic espressos or the beautifully crafted cappuccinos, every cup is a delight. I
+                            also appreciate the variety of pastries they offer—everything from fresh croissants to
+                            delicious muffins. I highly recommend TON N TOWN to anyone looking for a great coffee
+                            experience."
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="box">
+                        <img src="images/client 2.jpg" alt="" class="rounded-circle">
+                        <h4>Mrs. Sanika</h4>
+                        <p>
+                            "The best cafe in town! The staff is super friendly, and their pastries are to die for. I
+                            can't start my day without a visit to TON N TOWN. The quality of the coffee is
+                            exceptional, and you can tell they use the finest beans. I've tried several of their
+                            specialty drinks, and each one is better than the last. The ambiance is perfect for getting
+                            some work done or just unwinding with a good book. It's become my daily ritual to stop by
+                            for a cup of their signature blend. Kudos to the team for creating such a wonderful space!"
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="box">
+                        <img src="images/client.jpg" alt="" class="rounded-circle">
+                        <h4>Emily R.</h4>
+                        <p>
+                            "I love working from TON N TOWN. The Wi-Fi is fast, the environment is peaceful, and
+                            their lattes are the best I've ever had. The attention to detail in every aspect of the cafe
+                            is evident, from the comfortable seating to the tasteful decor. The staff is always
+                            accommodating and ensures that every customer has a pleasant experience. I've attended a few
+                            of their events, and it's clear that they are committed to building a community. It's not
+                            just a cafe; it's a place where you feel valued and appreciated. Highly recommend!".
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel_btn-box">
+                <a href="#carouselExampleControls" class="carousel-control-prev" role="button" data-slide="prev">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a href="#carouselExampleControls" class="carousel-control-next" role="button" data-slide="next">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- First Column -->
+                <div class="col-md-4">
+                    <h5 class="pt-3 pb-3 text-warning">Follow Us On</h5>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                </div>
+                <!-- Second Column -->
+                <div class="col-md-4">
+                    <h5 class="pt-3 pb-3 text-warning">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: info@example.com</li>
+                        <li>Phone: +1 234 567 890</li>
+                        <li>Address: 1234 Street Name, City, Country</li>
+                    </ul>
+                </div>
+                <!-- Third Column with Map -->
+                <div class="col-md-4">
+                    <h5 class="pt-3 pb-3 text-warning">Our Location</h5>
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241413.2733502984!2d72.72130319086293!3d19.016090549346654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9f0b81f13ad%3A0x3c12f7681185f869!2sNavi%20Mumbai%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sus!4v1719913897171!5m2!1sen!2sus"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
